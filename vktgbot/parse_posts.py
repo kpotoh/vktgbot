@@ -11,9 +11,9 @@ from tools import add_urls_to_text, prepare_text_for_html, prepare_text_for_repo
 
 def parse_post(item: dict, repost_exists: bool, item_type: str, group_name: str) -> dict:
     text = prepare_text_for_html(item["text"])
+    text = reformat_vk_links(text)
     if repost_exists:
         text = prepare_text_for_reposts(text, item, item_type, group_name)
-        text = reformat_vk_links(text)
 
     urls: list = []
     videos: list = []

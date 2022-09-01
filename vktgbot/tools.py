@@ -42,7 +42,7 @@ def prepare_text_for_reposts(text: str, item: dict, item_type: str, group_name: 
         id = item["copy_history"][0]["id"]
         link_to_repost = f"https://vk.com/wall{from_id}_{id}"
         text = f'{text}\n\n<a href="{link_to_repost}"><b>REPOST ↓ {group_name}</b></a>'
-    if item_type == "repost":
+    elif item_type == "repost":
         from_id = item["from_id"]
         id = item["id"]
         link_to_repost = f"https://vk.com/wall{from_id}_{id}"

@@ -5,7 +5,7 @@ logs/
 
 temp/
 
-env/
+env*/
 venv/
 ENV/
 

@@ -13,7 +13,7 @@ from tools import blacklist_check, prepare_temp_folder, whitelist_check
 
 
 def start_script():
-    bot = Bot(token=config.TG_BOT_TOKEN)
+    bot = Bot(token=config.TG_BOT_TOKEN, disable_web_page_preview=config.WEBPAGE_PREVIEW)
     dp = Dispatcher(bot)
 
     last_known_id = read_id()
